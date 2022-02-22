@@ -3,11 +3,12 @@ import { createGlobalStyle } from "styled-components"
 export const GlobalStyle = createGlobalStyle `
 
     :root{
-        --background: #F6F58C;
-        --primary: #00ADB5;
-        --secondary: #393E46;
-        --ancoras: #EEEEEE;
-        --navbar: #222831;
+        --navbar:#FFF1D4;
+        --background:#FFF8E9;
+        --titulo: #444;
+        --texto: #343434;
+        --btn-icon: #D8AD46;
+        --white: #fff;
     }
 
 
@@ -18,6 +19,7 @@ export const GlobalStyle = createGlobalStyle `
         font-family: 'poppins', sans-serif;
     }
     html{
+        background:var(--background);
         font-size: 62,5%;
         &::-webkit-scrollbar{
             width: 0.5rem;
@@ -26,7 +28,7 @@ export const GlobalStyle = createGlobalStyle `
             background: transparent;
         }
         &::-webkit-scrollbar-thumb{
-            background: var(--primary);
+            background: var(--btn-icon);
         }
     }
 

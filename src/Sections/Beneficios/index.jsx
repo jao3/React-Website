@@ -12,7 +12,7 @@ const Beneficios = styled.section`
 `;
 const Titulo = styled.h1`
     font-size: 2.5rem;
-    color: var(--ancoras);
+    color: var(--titulo);
     text-align: center;
     position: relative;
     &::before{
@@ -23,7 +23,7 @@ const Titulo = styled.h1`
         left: 50%;
         bottom: 0;
         transform: translate(-50%, 0.5rem);
-        border-bottom: 2px solid var(--primary);
+        border-bottom: 2px solid var(--btn-icon);
     }
 `;
 const Content = styled.div`
@@ -59,18 +59,21 @@ const BoxContent = styled.div`
 const Box = styled.div`
     padding: 2rem;
     i{
-        color:var(--primary);
+        color:var(--btn-icon);
         font-size: 2.5rem;
         font-weight: bold;
     }
     h3{
-        color: var(--ancoras);
+        color: var(--titulo);
         font-size: 1.4rem;
     }
     p{
         font-size: 1rem;
-        color: var(--ancoras)
+        color: var(--texto)
     }
+
+
+
 `;
 const RightImg= styled.img`
     padding: 2rem 0;

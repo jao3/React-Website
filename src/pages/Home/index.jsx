@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import FooterSection from '../../components/Footer';
 import AvaliacoesSection from '../../Sections/avaliacoes';
 import BeneficiosSection from '../../Sections/Beneficios';
 import HeroSection from "../../Sections/Hero/index"
@@ -18,6 +19,7 @@ const Home = () => {
         <HeroSection/>
         <BeneficiosSection/>
         <AvaliacoesSection/>
+        <FooterSection/>
     </Container>
   )
 }

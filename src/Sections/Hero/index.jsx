@@ -51,17 +51,16 @@ const Lb = styled.div`
     //justify-content: space-around;
     align-items: center;
     //margin-top: calc(2.5rem + 2.5vw);
-    filter:drop-shadow(2px 4px 6px black);
   }
 `;
 const Title = styled.h1`
-  color: var(--ancoras);
+  color: var(--titulo);
   font-size: calc(1.7rem + 1vw);
   padding: 0.5rem 0;
   line-height: 1.2;
 `;
 const SubText = styled.p`
-  color: var(--ancoras);
+  color: var(--texto);
   font-size: calc(0.3rem + 1vw);
   margin-top: 2rem;
 `;
@@ -69,19 +68,20 @@ const Button = styled.button`
     font-weight: 600;
     margin-top: 2rem;
     padding: 0.5rem 4rem;
-    border-radius: 40px;
+    border-radius: 10px;
     font-size: 1.4rem;
     cursor: pointer;
     transition: all 0.2s;
-    background: var(--primary);
-    color: var(--ancoras);
+    background: var(--btn-icon);
+    color: var(--background);
     &:hover{
         transform: scale(1.1);
-        background: var(--ancoras);
-        color: var(--primary);
+        background: var(--background);
+        color: var(--btn-icon);
+        border: 1px solid var(--btn-icon);
     }
     &:focus{
-        transform: scale(0.9);
+        transform: scale(0.1);
     }
 `;
 const RightImg = styled.img`
@@ -100,7 +100,7 @@ const HeroSection = () => {
     <HomeSection id="home">
       <MainContent>
         <Lb id="leftBlock">
-          <Title>Planilhas & Dashboards para facilitar sua vida nos processos de gestão.</Title>
+          <Title>"Não considere nenhuma prática como imutável."</Title>
           <SubText>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni aliquam atque voluptatibus nihil eligendi, minus quis eaque?</SubText>
           <Button>clique-me</Button>
         </Lb>

@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components';
+import img from "../../assets/logo-icon.png"
+import { FaMapMarkerAlt } from "react-icons/fa";
 
 const Headers = styled.header`
     display: flex;
@@ -20,30 +22,28 @@ const Logo = styled.a `
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 2rem;
-    height: auto;
+    
     cursor: pointer;
-    font-weight: 600;
     a{
-        color: var(--ancoras);
+        color: var(--btn-icon);
     }
 `;
 const Nav = styled.nav`
-    width: 25rem;
+    
     max-width: 40rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 
     @media only screen and (max-width: 768px) {
         display: none;
     }
-    
 
     a{
         font-weight: 600;
         line-height: 1.5;
-        color: var(--ancoras);
+        color: var(--btn-icon);
+        margin-right: 2rem;
         &::after{
             content: "";
             height: 3px;
@@ -54,7 +54,7 @@ const Nav = styled.nav`
         }
         &:not(:last-child):hover::after{
                 width: 100%;
-                background: var(--primary);
+                background: var(--btn-icon);
             }
     }
 `;
@@ -64,12 +64,13 @@ const Button = styled.button`
     border-radius: 20px;
     cursor: pointer;
     transition: all 0.2s;
-    background: var(--primary);
-    color: var(--ancoras);
+    background: var(--btn-icon);
+    color: var(--background);
     &:hover{
         transform: scale(1.1);
-        background: var(--ancoras);
-        color: var(--primary);
+        background: var(--background);
+        color: var(--btn-icon);
+        border: 1px solid var(--brackground);
     }
     &:focus{
         transform: scale(0.9);
@@ -89,7 +90,7 @@ const HamburguerBtn = styled.button`
 
     &::before, &::after{
         content: "";
-        background-color: var(--ancoras);
+        background-color: var(--btn-icon);
         width: 2rem;
         height: 2px;
         display: inline-block;
@@ -125,7 +126,7 @@ const MobileMenu = styled.div`
     transition: all 0.5s;
     z-index: -10;
 
-    background:rgba(34, 40, 49, 0.8);
+    background:rgba(255, 241, 212, 0.8);
     border-radius: 20px;
     margin: 0.5rem;
     overflow-x: hidden;
@@ -135,7 +136,7 @@ const MobileMenu = styled.div`
         font-size: 1.5rem;
         margin: 1.5rem;
         cursor: pointer;
-        color: var(--ancoras);
+        color: var(--btn-icon);
     }
 `;
 
@@ -147,12 +148,14 @@ const Header = () => {
   return (
     <Headers>
         <Logo>
-            <a href='/'>Logo</a>
+            <img src={img} alt="" />
         </Logo>
         <Nav>
             <a href="/">Home</a>
             <a href="/">Sobre</a>
+            <a href="/">Área de atuação</a>
             <a href="/">Depoimentos</a>
+            <a href='/'><FaMapMarkerAlt/></a>
             <a href="/">
                 <Button>Contato</Button>
             </a>
@@ -163,6 +166,7 @@ const Header = () => {
         <MobileMenu clicked={click}>
             <a href="/"  onClick={() => handleClick()} clicked={click}>Home</a>
             <a href="/" onClick={() => handleClick()} clicked={click}>Sobre</a>
+            <a href="/" onClick={() => handleClick()} clicked={click}>Área de atuação</a>
             <a href="/" onClick={() => handleClick()} clicked={click}>Depoimentos</a>
             <a href="/" onClick={() => handleClick()} clicked={click}>
                 <Button>Contato</Button>
