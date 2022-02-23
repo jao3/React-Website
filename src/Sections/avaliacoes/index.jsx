@@ -43,10 +43,6 @@ const Carousel = styled.div`
         bottom: 0;
     }
     .slick-slider .slick-dots button:before {
-    color: var(--btn-icon);
-    font-size: 1.5rem;
-    }
-    .slick-slide.slick-active {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -55,6 +51,11 @@ const Carousel = styled.div`
         padding: 0;
         margin-bottom: 3rem;
     }
+    .slick-slider .slick-dots button:before {
+    color: var(--btn-icon);
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
     .slick-slider .slick-arrow:before {
     color:var(--btn-icon);
     font-size: 2.5rem;

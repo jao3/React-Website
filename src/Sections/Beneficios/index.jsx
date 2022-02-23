@@ -89,7 +89,7 @@ const RightImg= styled.img`
 const BeneficiosSection = () => {
   return (
     <Beneficios>
-        <Titulo>Os benefícios e contratar o Psi.Care</Titulo>
+        <Titulo>Áreas de atuação</Titulo>
         <Content>
         
         <BoxContent>
